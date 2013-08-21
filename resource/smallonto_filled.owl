@@ -11,7 +11,11 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:nodeID="A0">
     <rdf:rest rdf:nodeID="A1"/>
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</rdf:first>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Construct</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment01">
     <rdf:type rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment"/>
@@ -25,10 +29,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <owl:oneOf rdf:nodeID="A3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#hasResponseVariableExperiment">
     <rdfs:range rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment"/>
     <rdfs:domain rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
@@ -36,11 +36,11 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="A4">
     <rdf:rest rdf:nodeID="A5"/>
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in vivo</rdf:first>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in vitro</rdf:first>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A6">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Average</rdf:first>
+    <rdf:rest rdf:nodeID="A7"/>
+    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#responseVariableID">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -53,52 +53,41 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:oneOf rdf:nodeID="A8"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in silico</rdf:first>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:rest rdf:nodeID="A10"/>
-    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A9"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</rdf:first>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A11">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis_01">
-    <rdf:type rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <owl:unionOf rdf:nodeID="A14"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <rdf:rest rdf:nodeID="A9"/>
+    <rdf:rest rdf:nodeID="A12"/>
     <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External</rdf:first>
-    <rdf:rest rdf:nodeID="A17"/>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Median</rdf:first>
+    <rdf:rest rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis_01">
+    <hypothesisID>Hypothesis_01</hypothesisID>
+    <rdf:type rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:rest rdf:nodeID="A16"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internal</rdf:first>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#hasResponseVariableHypothesis">
     <rdfs:range rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
     <rdfs:domain rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <owl:unionOf rdf:nodeID="A19"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#hypothesisID">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -106,47 +95,62 @@
     <rdfs:domain rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in silico</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:unionOf rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conclusion</rdf:first>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A21">
-    <owl:oneOf rdf:nodeID="A0"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
+  <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment_Hypothesis_01">
+    <rdf:type rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
+  <rdf:Description rdf:nodeID="A9">
     <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refuted</rdf:first>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:nodeID="A4"/>
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in vitro</rdf:first>
+  <rdf:Description rdf:nodeID="A19">
+    <owl:unionOf rdf:nodeID="A6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A17"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in vivo</rdf:first>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Median</rdf:first>
-    <rdf:rest rdf:nodeID="A6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A22">
-    <owl:oneOf rdf:nodeID="A23"/>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:oneOf rdf:nodeID="A4"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
+  <rdf:Description rdf:nodeID="A7">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <owl:oneOf rdf:nodeID="A8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A24">
-    <owl:unionOf rdf:nodeID="A15"/>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:unionOf rdf:nodeID="A11"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <rdf:rest rdf:nodeID="A12"/>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:nodeID="A10"/>
     <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:oneOf rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#experimentObjective">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -154,26 +158,26 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A14">
-    <rdf:rest rdf:nodeID="A11"/>
-    <rdf:first rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Hypothesis"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Average</rdf:first>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#responseVariableText">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#ResponseVariable"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <rdf:rest rdf:nodeID="A16"/>
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internal</rdf:first>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External</rdf:first>
+    <rdf:rest rdf:nodeID="A0"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#experimentDesignType">
     <rdfs:domain rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <rdf:rest rdf:nodeID="A20"/>
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Construct</rdf:first>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:oneOf rdf:nodeID="A15"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#hasHypothesisExperiment">
     <rdfs:range rdf:resource="http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment"/>

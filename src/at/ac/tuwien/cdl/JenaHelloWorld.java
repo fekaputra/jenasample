@@ -125,6 +125,7 @@ public class JenaHelloWorld {
 		QueryExecution qe = QueryExecutionFactory.create(q, model);
 		Model result = qe.execConstruct();
 		printModel(result);
+		model.add(result);
 		qe.close();
 	}
 	
@@ -209,21 +210,18 @@ public class JenaHelloWorld {
 		// add new instance using SPARQL insert, and then query it
 		String query3 = "PREFIX : <http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#>" +
 						"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
-						"INSERT DATA { :Hypothesis_01 rdf:type :Hypothesis }";
+						"INSERT DATA { 	:Hypothesis_01 rdf:type :Hypothesis; " +
+						"				:hypothesisID \"Hypothesis_01\" }";
 		jena.updateQuery(query3);
-		String query4 = "PREFIX : <http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#>" +
-						"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
-						"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-						"select * " +
-						"where { ?s rdf:type :Hypothesis }";
-		jena.selectQuery(query4);
 		
 		// use construct query
 		String query5 = "PREFIX : <http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#>" +
 						"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
 						"PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
-						"CONSTRUCT { ?s rdf:type ?o }" +
-						"WHERE { ?s ?p ?o }";
+						"CONSTRUCT { ?z rdf:type :Experiment }" +
+						"WHERE { 	?s rdf:type :Hypothesis; " +
+						"			:hypothesisID ?x " +
+						"			BIND (URI(CONCAT(\"http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment_\",?x)) AS ?z)}";
 		jena.constructQuery(query5);
 		
 		jena.saveModel("resource/smallonto_filled.owl");

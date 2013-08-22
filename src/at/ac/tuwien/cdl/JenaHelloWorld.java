@@ -224,6 +224,7 @@ public class JenaHelloWorld {
 						"			BIND (URI(CONCAT(\"http://www.cdl.ifs.tuwien.ac.at/emse_inspection.owl#Experiment_\",?x)) AS ?z)}";
 		jena.constructQuery(query5);
 		
+		
 		jena.saveModel("resource/smallonto_filled.owl");
 	}
 }
